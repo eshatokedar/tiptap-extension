@@ -48,27 +48,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.positive {
-  color: green;
-}
-
-.negative {
-  color: red;
-}
-
-.neutral {
-  color: gray;
-}
-
-.slightly-positive {
-  color: #8bc34a;
-}
-
-.very-negative {
-  color: #f44336;
-}
-
-.heading {
   font-size: 2.2rem; 
   margin-bottom: 30px; 
   padding: 10px; 
