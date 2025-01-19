@@ -1,0 +1,84 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c4c7ce67;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.editor-container {                       
+  width: 500px;        
+  max-height: 500px; 
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#editor {
+  width: 100%;             
+  min-height: 300px;      
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  word-wrap: break-word;   
+  overflow-wrap: break-word;
+  overflow-y: auto;      
+}
+
+#sentiment-emoji {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.neutral {
+  color: gray;
+}
+
+.slightly-positive {
+  color: #8bc34a;
+}
+
+.very-negative {
+  color: #f44336;
+}
+
+.heading {
+  font-size: 2.2rem; 
+  margin-bottom: 30px; 
+  padding: 10px; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+  font-weight: 700; 
+  color: #464545;
+  text-align: center; 
+  background: linear-gradient(120deg, #56c2a7, #200a32); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #4a90e2; 
+}
