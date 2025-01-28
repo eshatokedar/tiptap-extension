@@ -3,6 +3,33 @@ import Sentiment from 'sentiment'
 
 const sentimentAnalyzer = new Sentiment()
 
+const getSentimentEmoji = (score) => {
+  if (score > 5) return '😃'
+  if (score > 3) return '😊'
+  if (score >= 0) return '😐'
+  if (score < -3) return '😞'
+  if (score < -5) return '😟'
+}
+
+const getSentimentColor = (score) => {
+  if (score > 5) return '#C3E7CB' // green
+  if (score > 3) return '#D4EDDA' // slightly green
+  if (score >= 0) return '#FFFFFF' // white
+  if (score < -3) return '#F8D7DA' // slightly red
+  if (score < -5) return '#FAA0A0' // red
+}
+
+const getEmojiClass = (emoji) => {
+  const emojiClasses = {
+    '😃': 'very-positive',
+    '😊': 'positive',
+    '😞': 'negative',
+    '😟': 'very-negative',
+    '😐': 'neutral',
+  }
+  return emojiClasses[emoji] || 'neutral'
+}
+
 const SentimentAnalysis = Extension.create({
   name: 'sentimentAnalysis',
 
@@ -25,13 +52,5 @@ const SentimentAnalysis = Extension.create({
   },
 })
 
-const getSentimentEmoji = (score) => {
-  if (score > 5) return '😃'
-  if (score > 3) return '😊'
-  if (score >= 0) return '😐'
-  if (score < -3) return '😞'
-  if (score < -5) return '😟'
- 
-}
-
+export { SentimentAnalysis, getSentimentColor, getEmojiClass }
 export default SentimentAnalysis
